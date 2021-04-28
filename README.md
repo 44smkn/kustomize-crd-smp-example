@@ -1,0 +1,1 @@
+# kustomize-crd-smp-sample
