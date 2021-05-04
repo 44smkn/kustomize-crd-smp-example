@@ -1372,6 +1372,8 @@ spec:
                               - name
                             type: object
                           type: array
+                          x-kubernetes-list-type: map
+                          x-kubernetes-list-map-keys: ["name"]
                         dnsConfig:
                           properties:
                             nameservers:
