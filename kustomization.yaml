@@ -1,0 +1,22 @@
+resources:
+  - myapp.yaml
+
+#openapi:
+#  path: schema.json
+
+patchesStrategicMerge:
+  - |-
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    metadata:
+      name: myapp
+    spec:
+      template:
+        spec:
+          containers:
+            - name: myapp
+              image: ghcr.io/44smkn/myapp:v1.0.0
+            - name: nginx
+              env:
+              - name: NGINX_PORT
+                value: "80"
