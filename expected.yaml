@@ -6,10 +6,11 @@ spec:
   template:
     spec:
       containers:
-        - name: nginx
-          image: nginx:stable
-          env:
-            - name: NGINX_PORT
-              value: "80"
-        - image: ghcr.io/44smkn/myapp:v1.0.0
-          name: myapp
+      - image: ghcr.io/44smkn/myapp:v1.0.0
+        name: myapp
+      - env:
+        - name: NGINX_PORT
+          value: "80"
+        image: nginx:stable
+        imagePullPolicy: IfNotPresent
+        name: nginx
