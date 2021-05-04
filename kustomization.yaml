@@ -1,8 +1,8 @@
 resources:
   - myapp.yaml
 
-#openapi:
-#  path: schema.json
+openapi:
+  path: schema.json
 
 patchesStrategicMerge:
   - |-
