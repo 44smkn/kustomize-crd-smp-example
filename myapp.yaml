@@ -8,6 +8,7 @@ spec:
       containers:
         - name: nginx
           image: nginx:stable
+          imagePullPolicy: IfNotPresent
           env:
             - name: NGINX_HOST
               value: foobar.com
